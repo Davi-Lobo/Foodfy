@@ -1,0 +1,39 @@
+.list-container {
+    > .list {
+        display: grid;
+        gap: 30px 20px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    > .list > .item {
+        min-width: 0;
+    }
+}
+
+.item-info {
+    > .image {
+        border-radius: 15px;
+        display: flex;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+
+    > .image > .img {
+        width: 100%;
+    }
+
+    > .description > .name {
+        color: #111111;
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 5px;
+        margin-top: 0;
+    }
+
+    > .description > .author {
+        color: #777;
+        font-size: 14px;
+        line-height: 16px;
+        margin: 0;
+    }
+}

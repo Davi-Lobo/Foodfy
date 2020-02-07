@@ -1,0 +1,19 @@
+.header-content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.nav-list {
+    display: flex;
+
+    > .item {
+        display: flex;
+    }
+
+    > .item > .link {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
