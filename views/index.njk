@@ -1,0 +1,95 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+<title>Foodfy - Home</title>
+{% endblock %}
+
+{% block fullbanner %}
+<section class="_container _marginBottom">
+    <div class="banner-full _grid2">
+        <div class="banner-text">
+            <h1 class="title">As melhores receitas</h1>
+            <p class="description">Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block main %}
+<main class="_grid _container _marginBottom" id="main">
+    <div class="section-title">
+        <h2 class="title">Mais acessadas</h2>
+    </div>
+
+    <div class="list-container">
+        <ul class="list">
+            <li class="item">
+                <div class="item-info">
+                    <div class="image">
+                        <img class="img" src="assets/img/burger.png" alt="food">
+                    </div>
+                    <div class="description">
+                        <h2 class="name">Triplo bacon burger</h2>
+                        <h4 class="author">por Jorge Relato</h4>
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="item-info">
+                    <div class="image">
+                        <img class="img" src="assets/img/pizza.png" alt="food">
+                    </div>
+                    <div class="description">
+                        <h2 class="name">Pizza 4 estações</h2>
+                        <h4 class="author">por Fabiana Melo</h4>
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="item-info">
+                    <div class="image">
+                        <img class="img" src="assets/img/espaguete.png" alt="food">
+                    </div>
+                    <div class="description">
+                        <h2 class="name">Espaguete ao alho</h2>
+                        <h4 class="author">por Júlia Kinoto</h4>
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="item-info">
+                    <div class="image">
+                        <img class="img" src="assets/img/lasanha.png" alt="food">
+                    </div>
+                    <div class="description">
+                        <h2 class="name">Lasanha mac n' chees</h2>
+                        <h4 class="author">por Juliano Vieira</h4>
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="item-info">
+                    <div class="image">
+                        <img class="img" src="assets/img/doce.png" alt="food">
+                    </div>
+                    <div class="description">
+                        <h2 class="name">Docinhos pão-do-céu</h2>
+                        <h4 class="author">por Ricardo Golvea</h4>
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="item-info">
+                    <div class="image">
+                        <img class="img" src="assets/img/asinhas.png" alt="food">
+                    </div>
+                    <div class="description">
+                        <h2 class="name">Asinhas de frango ao barbecue</h2>
+                        <h4 class="author">por Vania Steroski</h4>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</main>
+{% endblock %}

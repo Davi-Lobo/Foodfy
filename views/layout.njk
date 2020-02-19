@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+
+        {% block head %}
+        <title>Foodfy</title>
+        {% endblock %}
+
+        <meta charset="utf-8">
+        <meta name="author" content="Davi Lobo">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="assets/css/styles-min.css">
+    </head>
+
+    <body>
+        <header class="page-header _unmargin">
+            <div class="header-content _grid">
+                <a class="logo" href="/">
+                    <img src="assets/img/logo.png" alt="Foodfy">
+                </a>
+    
+                <div class="nav-section">
+                    <nav class="navigation">
+                        <ul class="nav-list">
+                            <li class="item"><a class="link" href="/recipes">Receitas</a></li>
+                            <li class="item"><a class="link" href="/about">Sobre</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        {% block fullbanner %}{% endblock %}
+
+        {% block main %}{% endblock %}
+
+        <footer class="page-footer _full">
+            <div class="footer-content _grid _container">
+                <h6 class="text">Todos os direitos reservados, Foodfy</h6>
+            </div>
+        </footer>
+    </body>
+
+</html>
