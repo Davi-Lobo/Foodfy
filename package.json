@@ -6,17 +6,15 @@
   "repository": "https://github.com/Davi-Lobo/Foodfy.git",
   "author": "Davi Lobo <davi.lobo.gs@gmail.com>",
   "license": "MIT",
-
   "keywords": [
     "sass"
   ],
-
   "devDependencies": {
     "gulp-sass": "^3.1.10"
   },
-
   "dependencies": {
     "gulp-concat": "^2.6.1",
-    "gulp-uglifycss": "^1.1.0"
+    "gulp-uglifycss": "^1.1.0",
+    "nunjucks": "^3.2.0"
   }
 }
