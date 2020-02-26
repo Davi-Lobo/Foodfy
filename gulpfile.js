@@ -4,8 +4,8 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglifycss');
 const rename = require('gulp-rename');
 
-const sassPath = 'assets/scss/**/*.scss';
-const cssPath = 'assets/css';
+const sassPath = 'public/assets/scss/**/*.scss';
+const cssPath = 'public/assets/css';
 
 // Compiling SASS into CSS
 function style() {

@@ -11,6 +11,8 @@ body {
 
 body {
     color: #444;
+    display: flex;
+    flex-direction: column;
     font-family: 'Roboto';
     margin: 0;
 }
