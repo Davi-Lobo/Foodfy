@@ -29,13 +29,22 @@ a {
     text-decoration: none;
 }
 
+img {
+    display: block;
+}
+
+button {
+    outline: 0;
+}
+
 .section-title {
+    display: flex;
     margin-bottom: 20px;
 
     > .title {
         color: #111;
         font-size: 20px;
         font-weight: 700;
-        margin-top: 0;
+        margin: 0;
     }   
 }

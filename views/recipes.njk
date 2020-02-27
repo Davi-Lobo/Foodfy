@@ -15,7 +15,7 @@
         {% if items %}
             <ul class="list">
                 {% for item in items %}
-                    <li class="item">
+                    <li class="item" id="{{item.id}}">
                         <div class="item-info">
                             <div class="image">
                                 <img class="img" src="{{item.image}}" alt="{{item.title}}">
@@ -28,6 +28,8 @@
                     </li>
                 {% endfor %}
             </ul>
+
+            <script src="/assets/js/redirect.js"></script>
         {% endif %}
     </div>
 </main>

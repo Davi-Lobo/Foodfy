@@ -6,8 +6,56 @@
 
 {% block main %}
     <main class="_grid _container _marginBottom" id="main">
-        <div class="section-title">
-            <h2 class="title">Nossas Receitas</h2>
+        
+        <div class="recipe-thumb">
+            <img class="image" src="{{recipe.image}}" alt="Foto de {{recipe.title}}"/>
         </div>
+
+        <div class="recipe-info">
+            <h1 class="title">{{recipe.title}}</h1>
+            <h2 class="author">{{recipe.author}}</h2>
+        </div>
+
+        <div class="step-container" id="ingredients-section">
+            <div class="section-title">
+                <h3 class="title">Ingredientes</h3>
+
+                <button class="collapse-button">Mostrar</button>
+            </div>
+
+            <ul class="list _discStyle">
+                {%for ingredient in recipe.ingredients%}
+                    <li class="item">
+                        <span>{{ingredient}}</span>
+                    </li>
+                {%endfor%}
+            </ul>
+
+            <script src="/assets/js/collapsible-content.js"></script>
+        </div>
+
+        <div class="step-container" id="preparation-section">
+            <div class="section-title">
+                <h3 class="title">Modo de preparo</h3>
+            </div>
+
+            <ul class="list _discStyle">
+                {%for step in recipe.preparation%}
+                    <li class="item">
+                        <span>{{step}}</span>
+                    </li>
+                {%endfor%}
+            </ul>
+        </div>
+
+        {% if recipe.information != '' %}
+            <div class="step-container" id="additional-section">
+                <div class="section-title">
+                    <h3 class="title">Informações Adicionais</h3>
+                </div>
+
+                <p class="text">{{recipe.information}}</p>
+            </div>
+        {% endif %}
     </main>
 {% endblock %}

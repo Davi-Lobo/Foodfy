@@ -1,0 +1,15 @@
+.collapse-button {
+    align-items: flex-end;
+    background: transparent;
+    border: 0;
+    color: #999;
+    display: flex;
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 5px;
+    text-transform: uppercase;
+
+    &:hover {
+        color: #111111;
+    }
+}

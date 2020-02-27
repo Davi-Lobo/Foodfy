@@ -7,6 +7,10 @@
 
     > .list > .item {
         min-width: 0;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 

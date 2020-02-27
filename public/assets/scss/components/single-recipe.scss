@@ -1,0 +1,61 @@
+.recipe-thumb {
+    margin-bottom: 50px;
+
+    > .image {
+        border-radius: 15px;
+        width: 100%;
+    }
+}
+
+.recipe-info {
+    margin-bottom: 50px;
+    text-align: center;
+
+    > .title {
+        color: #111111;
+        font-size: 36px;
+        margin-bottom: 5px;
+        margin: 0;
+    }
+
+    > .author {
+        color: #777777;
+        font-size: 20px;
+        margin: 0;
+    }
+}
+
+
+.step-container {
+    margin-bottom: 40px;
+
+    > .title {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    > .text {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+
+    > .list {
+        max-height: 0vh;
+        overflow: hidden;
+        padding-left: 20px;
+        transition: all 300ms ease-in;
+    }
+
+    > .list > .item {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    &.collapsed {
+        > .list {
+            max-height: 1000px;
+        }
+    }
+}
