@@ -20,7 +20,7 @@
             <div class="section-title">
                 <h3 class="title">Ingredientes</h3>
 
-                <button class="collapse-button">Mostrar</button>
+                <button class="collapse-button" target="ingredients-section"></button>
             </div>
 
             <ul class="list _discStyle">
@@ -30,13 +30,13 @@
                     </li>
                 {%endfor%}
             </ul>
-
-            <script src="/assets/js/collapsible-content.js"></script>
         </div>
 
         <div class="step-container" id="preparation-section">
             <div class="section-title">
                 <h3 class="title">Modo de preparo</h3>
+
+                <button class="collapse-button" target="preparation-section"></button>
             </div>
 
             <ul class="list _discStyle">
@@ -52,10 +52,16 @@
             <div class="step-container" id="additional-section">
                 <div class="section-title">
                     <h3 class="title">Informações Adicionais</h3>
+
+                    <button class="collapse-button" target="additional-section"></button>
                 </div>
 
                 <p class="text">{{recipe.information}}</p>
             </div>
         {% endif %}
     </main>
+{% endblock %}
+
+{% block footerScripts%}
+    <script src="/assets/js/collapsible-content.js"></script>
 {% endblock %}

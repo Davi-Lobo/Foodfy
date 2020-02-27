@@ -31,12 +31,12 @@
             </div>
         </header>
 
-        {% block fullbanner %}
-        {% endblock %}
+        {% block fullbanner %}{% endblock %}
 
         {% block main %}{% endblock %}
 
         <footer class="page-footer _full">
+            {% block footerScripts %}{% endblock %}
             <div class="footer-content _grid _container">
                 <h6 class="text">Todos os direitos reservados, Foodfy</h6>
             </div>
