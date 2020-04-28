@@ -1,5 +1,9 @@
 .page-header {
     margin-bottom: 40px;
+
+    &.-admin {
+        background-color: #000;
+    }
 }
 
 .header-content {

@@ -12,6 +12,12 @@
             cursor: pointer;
         }
     }
+
+    &.-admin {
+        > .list {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
 }
 
 .item-info {
@@ -39,5 +45,34 @@
         font-size: 14px;
         line-height: 16px;
         margin: 0;
+    }
+
+    &.-admin {
+        display: flex;
+
+        > .image {
+            height: 80px;
+            margin-bottom: 0;
+            width: 172px;
+        }
+
+        > .description {
+            flex-shrink: 0;
+            padding-left: 20px;
+        }
+
+        > .description > .author {
+            margin-bottom: 5px;
+        }
+
+        > .description > .link {
+            color: #6558C3;
+            font-size: 14px;
+            font-weight: 700;
+
+            &:hover {
+                filter: brightness(70%);
+            }
+        }
     }
 }

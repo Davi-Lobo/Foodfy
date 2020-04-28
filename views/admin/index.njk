@@ -1,0 +1,31 @@
+{% extends "admin/layout.njk" %}
+
+{% block main %}
+<main class="_grid _container _marginBottom" id="main">
+    <div class="section-title">
+        <h2 class="title">Gereciar Receitas</h2>
+    </div>
+
+    <div class="list-container -admin">
+        {% if items %}
+            <ul class="list">
+                {% for item in items %}
+                    <li class="item" id="{{item.id}}">
+                        <div class="item-info -admin">
+                            <div class="image">
+                                <img class="img" src="{{item.image}}" alt="{{item.title}}">
+                            </div>
+                            <div class="description">
+                                <h2 class="name">{{item.title}}</h2>
+                                <h4 class="author">{{item.author}}</h4>
+                                <a href="recipes/{{item.id}}" class="link">Visualizar</a>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</main>
+
+{% endblock %}
