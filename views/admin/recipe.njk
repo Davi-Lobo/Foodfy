@@ -23,11 +23,11 @@
             </div>
 
             <ul class="list _discStyle">
-                {%for ingredient in recipe.ingredients%}
+                {% for ingredient in recipe.ingredients %}
                     <li class="item">
                         <span>{{ingredient}}</span>
                     </li>
-                {%endfor%}
+                {% endfor %}
             </ul>
         </div>
 
@@ -51,7 +51,7 @@
                     <h3 class="title">Informações Adicionais</h3>
                 </div>
 
-                <p class="text">{{recipe.information}}</p>
+                <p class="text">{{recipe.additional}}</p>
             </div>
         {% endif %}
     </main>

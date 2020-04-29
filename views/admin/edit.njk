@@ -1,0 +1,106 @@
+{% extends "admin/layout.njk" %}
+
+{% block main %}
+    <main class="_grid _container _marginBottom" id="main">
+        <form class="recipe-form" method="POST" action="/admin/recipes?_method=PUT">
+            <h1 class="title">Editando Receita</h1>
+            <button class="button" type="submit">Salvar Receita</button>
+
+            <div class="form-section">
+                <input 
+                    type="hidden" 
+                    name="id" 
+                    value={{recipe.id}}
+                > 
+
+                <div class="group">
+                    <label for="author" class="label">Autor</label>
+                    <input 
+                        class="input" 
+                        type="text" 
+                        name="author" 
+                        id="author"
+                        value="{{recipe.author}}"
+                        placeholder="Nome do autor"
+                    />
+                </div>
+            
+                <div class="group">
+                    <label for="recipeUrl" class="label">Imagem da receita</label>
+                    <input 
+                        class="input" 
+                        type="url" 
+                        name="image" 
+                        id="img_url"
+                        value="{{recipe.image}}"
+                        placeholder="URL da imagem"
+                    />
+                </div>
+
+                <div class="group">
+                    <label for="name" class="label">Nome</label>
+                    <input 
+                        class="input" 
+                        type="text" 
+                        name="title" 
+                        id="name"
+                        value="{{recipe.title}}"
+                        placeholder="Nome da receita"
+                    />
+                </div>
+
+                <div class="group" id="ingredients-container">
+                    <label class="label">Ingredientes</label>
+                    <div class="groups">
+                        {% for ingredient in recipe.ingredients %}
+                            <div class="group">
+                                <input 
+                                    class="input" 
+                                    type="text" 
+                                    name="ingredients[]"
+                                    value="{{ingredient}}"
+                                    placeholder="Insira o ingrediente"
+                                />
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                    <button type="button" class="button" id="addIngredient">Adicionar novo ingrediente</button>
+                </div>
+
+                <div class="group" id="steps-container">
+                    <label class="label">Modo de preparo</label>
+                    <div class="groups">
+                        {% for step in recipe.preparation %}
+                            <div class="group">
+                                <input 
+                                    class="input" 
+                                    type="text" 
+                                    name="preparation[]"
+                                    value="{{step}}"
+                                    placeholder="Insira o próximo passo"
+                                />
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <button type="button" class="button" id="addStep">Adicionar novo passo</button>
+                </div>
+
+                <div class="group">
+                    <label for="additionalInfo" class="label">Informações adicionais</label>
+                    <textarea 
+                        class="input" 
+                        name="additional" 
+                        id="additionalInfo"
+                    >{{recipe.additional}}
+                    </textarea>
+                </div>
+            </div> 
+        </form>
+    </main>
+{% endblock%}
+
+{% block footerScripts %}
+    <script src="/assets/js/addIngredient.js"></script>
+    <script src="/assets/js/addStep.js"></script>
+{% endblock %}

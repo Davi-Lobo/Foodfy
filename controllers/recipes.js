@@ -35,7 +35,7 @@ exports.post = function(req, res) {
         }
     }
 
-    let { author, title, image, ingredients, steps, additional } = req.body;
+    let { author, title, image, ingredients, preparation, additional } = req.body;
 
     const id = Number(data.recipes.length + 1);
 
@@ -64,3 +64,53 @@ exports.post = function(req, res) {
         return res.redirect("/admin");
     });
 }
+
+exports.edit = function(req, res) {
+    const { id } = req.params;
+
+    const findRecipe = data.recipes.find(function(recipe) {
+        return recipe.id == id;
+    });
+
+    if(!findRecipe) {
+        return res.send("Recipe not found");
+    }
+
+    const recipe = findRecipe;
+    
+    return res.render('admin/edit', { recipe });
+};
+
+exports.put = function(req, res) {
+    const { id } = req.body;
+    console.log(id)
+    
+    let index = 0;
+
+    const findRecipe = data.recipes.find(function(recipe, foundIndex) {
+        if (id == recipe.id) {
+            index = foundIndex;
+            
+            return true;
+        }
+    });
+
+    if(!findRecipe) {
+        return res.send("Recipe not found");
+    }
+
+    const recipe = {
+        ...findRecipe,
+        ...req.body,
+    };
+
+    data.recipes[index] = recipe;
+
+    fs.writeFile("database/data.json", JSON.stringify(data, null, 2), function(err) {
+        if (err) {
+            return res.send("Write file error!");
+        }
+
+        return res.redirect(`/admin/recipes/${id}`);
+    });
+};

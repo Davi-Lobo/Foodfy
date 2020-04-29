@@ -37,5 +37,8 @@ routes.get("/admin/recipes/create", recipes.create);
 routes.post("/admin/recipes/create", recipes.post);
 
 routes.get("/admin/recipes/:id", recipes.show);
+routes.get("/admin/recipes/:id/edit", recipes.edit);
+
+routes.put("/admin/recipes", recipes.put);
 
 module.exports = routes;
