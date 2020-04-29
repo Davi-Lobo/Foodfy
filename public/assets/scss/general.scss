@@ -40,6 +40,31 @@ button {
     outline: 0;
 }
 
+input {
+    height: 50px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+textarea {
+    min-height: 250px;
+    padding: 20px;
+    resize: vertical;
+}
+
+input,
+textarea {
+    border-radius: 5px;
+    border: 1px solid #DDD;
+    font-family: inherit;
+    outline: 0;
+    transition: border-color 250ms ease-in;
+
+    &:focus {
+        border-color:  #6558C3;
+    }
+}
+
 .section-title {
     display: flex;
     margin-bottom: 20px;
