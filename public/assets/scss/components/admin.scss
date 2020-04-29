@@ -25,3 +25,46 @@
         }
     }
 }
+
+.form-actions {
+    display: flex;
+
+    > .title {
+        padding-right: 20px;
+        width: 50%;
+    }
+}
+
+.actions-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+
+    > .button {
+        align-items: center;
+        background-color: #6558C3;
+        border-radius: 5px;
+        border: 0;
+        color: #FFF;
+        display: flex;
+        font-size: 16px;
+        font-weight: 700;
+        height: 40px;
+        justify-content: center;    
+        margin: 0 10px;
+        padding: 0 20px;
+        width: auto;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    
+        &.-delete {
+            background-color: #DC4747;
+        }
+    
+        &:hover {
+            filter: brightness(90%);
+        }
+    }
+}
